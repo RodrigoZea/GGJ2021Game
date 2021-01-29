@@ -28,4 +28,10 @@ public class RG_Room : MonoBehaviour
     {
         return new Vector3(X * width, Y * height);
     }
+
+    void OnTriggerEnter2D(Collider2D collider) {
+        Debug.Log("Trigger!");
+        if (collider.tag == "Player")
+            RG_RoomController.instance.OnPlayerEnterRoom(this);
+    }
 }

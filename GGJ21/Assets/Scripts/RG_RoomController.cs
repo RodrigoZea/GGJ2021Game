@@ -20,6 +20,7 @@ public class RG_RoomController : MonoBehaviour
     public static RG_RoomController instance;
     public List<RG_Room> loadedRooms = new List<RG_Room>();
     RoomInfo currentLoadRoomData;
+    RG_Room currentRoom;
     Queue<RoomInfo> loadRoomQueue = new Queue<RoomInfo>();
     bool isLoadingRoom;
 
@@ -89,6 +90,9 @@ public class RG_RoomController : MonoBehaviour
         // Finished loading
         isLoadingRoom = false;
 
+        // If theres no room assigned to the camera, assign the one thats registering
+        if (loadedRooms.Count == 0) RG_CameraController.instance.currentRoom = room;
+
         // Add it to the list
         loadedRooms.Add(room);
     }
@@ -96,5 +100,12 @@ public class RG_RoomController : MonoBehaviour
     public bool RoomExists(int x, int y)
     {
         return loadedRooms.Find(room => room.X == x && room.Y == y) != null;
+    }
+
+    public void OnPlayerEnterRoom(RG_Room room)
+    {
+        // We set so that the current room asigned to the camera changes
+        RG_CameraController.instance.currentRoom = room;
+        currentRoom = room;
     }
 }
