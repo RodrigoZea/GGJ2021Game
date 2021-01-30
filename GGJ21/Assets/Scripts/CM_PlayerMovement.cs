@@ -15,12 +15,14 @@ public class CM_PlayerMovement : MonoBehaviour
     public Transform bulletPoint;
     public float fireDelay;
     private float lastFire;
-    //private bool dash = false;
+    public Animator animator;
 
     CM_Shooting shooting;
+    CM_Melee melee;
 
     void Start(){
         shooting = GetComponent<CM_Shooting>();
+        melee = GetComponent<CM_Melee>();
         look.Set(0, 1);
 
     }
@@ -33,7 +35,8 @@ public class CM_PlayerMovement : MonoBehaviour
 
         shoot.x = Input.GetAxisRaw("ShootHorizontal");
         shoot.y = Input.GetAxisRaw("ShootVertical");
-        //if (Time.time > lastFire + fireDelay){
+
+        look = movement;
         if (shoot.x != 0 || shoot.y != 0){
             if (Input.GetButtonDown("ShootHorizontal")){
                 look.Set(shoot.x, 0);
@@ -45,23 +48,25 @@ public class CM_PlayerMovement : MonoBehaviour
                 MoveBulletPoint();
                 shooting.Shoot(bulletPoint, bulletPrefab);
             }
-            Debug.Log(look);
         }
 
         if (Input.GetButtonDown("Jump") && (Time.time > lastFire + fireDelay)){
             StartCoroutine(Dash());
             lastFire = Time.time;
-            //rb.velocity = Vector2.zero;
         }
-        Debug.Log(Time.time - lastFire);
-        //}
-        
+        //Debug.Log(Time.time - lastFire);
+
+        if (Input.GetButtonDown("Fire2")){
+            melee.Attack(bulletPoint);
+        }
+        animator.SetFloat("Horizontal", look.x);
+        animator.SetFloat("Vertical", look.y);
+        animator.SetFloat("Speed", look.sqrMagnitude);
+
     }
 
     void FixedUpdate() {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        //bulletPoint.eulerAngles = new Vector2(look.x * 90, look.y * 90); 
-
     }
 
     void MoveBulletPoint(){
