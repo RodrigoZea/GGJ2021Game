@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RG_RoomGenerationData : MonoBehaviour
+[CreateAssetMenu(fileName = "RoomGenerationData.asset", menuName = "RoomGenerationData/Room Data")]
+public class RG_RoomGenerationData : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int numDirections;
+    public int minIterations;
+    public int maxIterations;
 }

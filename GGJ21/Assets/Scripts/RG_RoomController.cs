@@ -31,9 +31,9 @@ public class RG_RoomController : MonoBehaviour
 
     void Start()
     {
-        LoadRoom("Room1", 0, 0);
-        LoadRoom("Room1", 1, 0);
-        LoadRoom("Room1", 0, 1);
+        // LoadRoom("Room1", 0, 0);
+        // LoadRoom("Room1", 1, 0);
+        // LoadRoom("Room1", 0, 1);
     }
 
     void Update()
@@ -70,9 +70,7 @@ public class RG_RoomController : MonoBehaviour
         );
 
         while(loadRoom.isDone == false)
-        {
             yield return null;
-        }
     }
 
     public void RegisterRoom(RG_Room room)

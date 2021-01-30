@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RG_CameraController : MonoBehaviour
 {
-
     public static RG_CameraController instance;
     public RG_Room currentRoom;
     public float roomSpeedChange = 100;
@@ -13,13 +12,11 @@ public class RG_CameraController : MonoBehaviour
         instance = this;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         ChangePosition();

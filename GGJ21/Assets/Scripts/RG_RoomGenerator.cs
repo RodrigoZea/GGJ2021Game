@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class RG_RoomGenerator : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public RG_RoomGenerationData roomGenerationData;
+    private List<Vector2Int> newRooms;
+
     void Start()
     {
-        
+        newRooms = RG_RoomDirectionController.GenerateRoom(roomGenerationData);
+        SpawnRooms(newRooms);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnRooms(IEnumerable<Vector2Int> rooms)
     {
-        
+        RG_RoomController.instance.LoadRoom("Room1", 0, 0);
+        foreach (Vector2Int roomCoords in rooms)
+        {
+            RG_RoomController.instance.LoadRoom("Room1", roomCoords.x, roomCoords.y);
+        }
     }
 }
