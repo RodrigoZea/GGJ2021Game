@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 883350190}
   - component: {fileID: 883350193}
   - component: {fileID: 883350194}
+  - component: {fileID: 883350195}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -247,7 +248,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2720914884714543658, guid: 693707c08c839254bbdd069307d5531a,
     type: 3}
   bulletPoint: {fileID: 1011279259}
-  fireDelay: 4
+  fireDelay: 3
+  animator: {fileID: 883350195}
 --- !u!114 &883350194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +263,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletForce: 20
+--- !u!95 &883350195
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883350189}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d8715e04f4199f4a902dc76bd80d0b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1011279258
 GameObject:
   m_ObjectHideFlags: 0
