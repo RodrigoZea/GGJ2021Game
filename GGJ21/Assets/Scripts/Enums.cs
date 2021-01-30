@@ -14,3 +14,8 @@ public enum RG_Direction
     down = 2,
     right = 3
 };
+
+public enum RG_DoorDirection
+{
+    left, right, top, down
+};
