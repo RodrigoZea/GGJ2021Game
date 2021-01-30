@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00c1b9d157f16a4ebeea6e6c9a0ec48, type: 3}
   m_Name: RG_RoomGenerationData
   m_EditorClassIdentifier: 
-  roomNumbers: 2
+  numDirections: 2
   minIterations: 7
-  maxIterations: 10
+  maxIterations: 12

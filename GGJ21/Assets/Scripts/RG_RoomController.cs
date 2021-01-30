@@ -75,29 +75,45 @@ public class RG_RoomController : MonoBehaviour
 
     public void RegisterRoom(RG_Room room)
     {
-        room.transform.position = new Vector3(
-            currentLoadRoomData.X * room.width,
-            currentLoadRoomData.Y * room.height
-        );
+        // Validate if room exists before creating one
+        if (!RoomExists(currentLoadRoomData.X, currentLoadRoomData.Y))
+        {
+            room.transform.position = new Vector3(
+                currentLoadRoomData.X * room.width,
+                currentLoadRoomData.Y * room.height
+            );
 
-        room.X = currentLoadRoomData.X;
-        room.Y = currentLoadRoomData.Y;
-        room.name = currentLoadRoomData.Name + "_" + room.X + ", " + room.Y;
-        room.transform.parent = transform;
+            room.X = currentLoadRoomData.X;
+            room.Y = currentLoadRoomData.Y;
+            room.name = currentLoadRoomData.Name + "_" + room.X + ", " + room.Y;
+            room.transform.parent = transform;
 
-        // Finished loading
-        isLoadingRoom = false;
+            // Finished loading
+            isLoadingRoom = false;
 
-        // If theres no room assigned to the camera, assign the one thats registering
-        if (loadedRooms.Count == 0) RG_CameraController.instance.currentRoom = room;
+            // If theres no room assigned to the camera, assign the one thats registering
+            if (loadedRooms.Count == 0) RG_CameraController.instance.currentRoom = room;
 
-        // Add it to the list
-        loadedRooms.Add(room);
+            // Add it to the list
+            loadedRooms.Add(room);
+            room.RemoveDoors();
+        }
+        else
+        {
+            Destroy(room.gameObject);
+            isLoadingRoom = false;
+        }
+
     }
 
     public bool RoomExists(int x, int y)
     {
         return loadedRooms.Find(room => room.X == x && room.Y == y) != null;
+    }
+
+    public RG_Room FindRoom(int x, int y)
+    {
+        return loadedRooms.Find(room => room.X == x && room.Y == y);
     }
 
     public void OnPlayerEnterRoom(RG_Room room)

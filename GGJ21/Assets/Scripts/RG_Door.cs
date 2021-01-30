@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class RG_Door : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public RG_DoorDirection doorDirection;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
