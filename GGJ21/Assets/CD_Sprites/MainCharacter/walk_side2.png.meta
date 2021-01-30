@@ -1,76 +1,70 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: c56f8da167e1f914280bf775d00176b9
-TextureImporter:
-  internalIDToNameTable: []
-=======
-guid: 2944e764cf1a5ad48952b206a341c315
+guid: d4a762b0fb620a94eac1358ae968c97e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2861348444873877583
-    second: walk_side_0
+      213: 3792652106642797856
+    second: walk_side2_0
   - first:
-      213: 1789459678252735138
-    second: walk_side_1
+      213: 8654770707582786663
+    second: walk_side2_1
   - first:
-      213: -477221755682237556
-    second: walk_side_2
+      213: 2760798084342080885
+    second: walk_side2_2
   - first:
-      213: -7671112265306433763
-    second: walk_side_3
+      213: 4219334023417646679
+    second: walk_side2_3
   - first:
-      213: -5604555228981898809
-    second: walk_side_4
+      213: -6993478573021401644
+    second: walk_side2_4
   - first:
-      213: -6220358330636658205
-    second: walk_side_5
+      213: -3881100675986086249
+    second: walk_side2_5
   - first:
-      213: 8812075849929156606
-    second: walk_side_6
+      213: 161234864211698297
+    second: walk_side2_6
   - first:
-      213: 3611268479084103473
-    second: walk_side_7
+      213: 1640993930166653840
+    second: walk_side2_7
   - first:
-      213: 742402168275963781
-    second: walk_side_8
+      213: 8016195047459143908
+    second: walk_side2_8
   - first:
-      213: 9151425025737923160
-    second: walk_side_9
+      213: 8767046074943940985
+    second: walk_side2_9
   - first:
-      213: 352337038499988489
-    second: walk_side_10
+      213: -2388796775066492582
+    second: walk_side2_10
   - first:
-      213: -153882695132609298
-    second: walk_side_11
+      213: -3088633520773948674
+    second: walk_side2_11
   - first:
-      213: 5998956973629239632
-    second: walk_side_12
+      213: 4158375618169167352
+    second: walk_side2_12
   - first:
-      213: -2975474183402355504
-    second: walk_side_13
+      213: -3887256297943944333
+    second: walk_side2_13
   - first:
-      213: 142520559783833286
-    second: walk_side_14
+      213: -397869482870848017
+    second: walk_side2_14
   - first:
-      213: -8009953579928998555
-    second: walk_side_15
+      213: 112578170272029218
+    second: walk_side2_15
   - first:
-      213: 770185406501567579
-    second: walk_side_16
+      213: -1924764461037039738
+    second: walk_side2_16
   - first:
-      213: 7677840621883265652
-    second: walk_side_17
+      213: 931318333329988439
+    second: walk_side2_17
   - first:
-      213: -4165115552183689951
-    second: walk_side_18
+      213: 9117141385350867739
+    second: walk_side2_18
   - first:
-      213: 1738718652914042954
-    second: walk_side_19
+      213: -3130646145889097719
+    second: walk_side2_19
   - first:
-      213: 956101745600009329
-    second: walk_side_20
->>>>>>> f182d09d4eef8b396fc8ae0abedb63ed96e7a574
+      213: -5356002071026391870
+    second: walk_side2_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,11 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> f182d09d4eef8b396fc8ae0abedb63ed96e7a574
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -146,11 +136,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-=======
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -191,31 +176,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_side_0
+      name: walk_side2_0
       rect:
         serializedVersion: 2
-        x: 108
-        y: 492
-        width: 7
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b71dacdfb27a48d0800000000000000
-      internalID: -2861348444873877583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_1
-      rect:
-        serializedVersion: 2
-        x: 110
+        x: 251
         y: 50
         width: 362
         height: 648
@@ -226,122 +190,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aa932ea81075d810800000000000000
-      internalID: 1789459678252735138
+      spriteID: 025b4152ff432a430800000000000000
+      internalID: 3792652106642797856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_side_2
+      name: walk_side2_1
       rect:
         serializedVersion: 2
-        x: 593
-        y: 50
-        width: 373
-        height: 648
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c83d87577519069f0800000000000000
-      internalID: -477221755682237556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_3
-      rect:
-        serializedVersion: 2
-        x: 1033
-        y: 50
-        width: 377
-        height: 648
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d17944ab90cba8590800000000000000
-      internalID: -7671112265306433763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_4
-      rect:
-        serializedVersion: 2
-        x: 1477
-        y: 50
-        width: 375
-        height: 648
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c1d974a6be9832b0800000000000000
-      internalID: -5604555228981898809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_5
-      rect:
-        serializedVersion: 2
-        x: 1917
-        y: 50
-        width: 376
-        height: 648
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e992ce1e09dca9a0800000000000000
-      internalID: -6220358330636658205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_6
-      rect:
-        serializedVersion: 2
-        x: 2371
-        y: 50
-        width: 372
-        height: 648
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef763d01c48ca4a70800000000000000
-      internalID: 8812075849929156606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_7
-      rect:
-        serializedVersion: 2
-        x: 2820
+        x: 609
         y: 492
         width: 6
         height: 4
@@ -352,19 +211,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1378f546c8dcd1230800000000000000
-      internalID: 3611268479084103473
+      spriteID: 76c9de58a1ceb1870800000000000000
+      internalID: 8654770707582786663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_side_8
+      name: walk_side2_2
       rect:
         serializedVersion: 2
-        x: 2822
+        x: 695
         y: 50
-        width: 364
+        width: 362
         height: 648
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -373,59 +232,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58f8190b6da8d4a00800000000000000
-      internalID: 742402168275963781
+      spriteID: 575e9c9fa33505620800000000000000
+      internalID: 2760798084342080885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_side_9
+      name: walk_side2_3
       rect:
         serializedVersion: 2
-        x: 3267
-        y: 490
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85a9ab71394600f70800000000000000
-      internalID: 9151425025737923160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_10
-      rect:
-        serializedVersion: 2
-        x: 3270
-        y: 50
-        width: 363
-        height: 648
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90441057ba0c3e400800000000000000
-      internalID: 352337038499988489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_11
-      rect:
-        serializedVersion: 2
-        x: 3722
+        x: 1055
         y: 490
         width: 4
         height: 6
@@ -436,19 +253,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee48a8b018c4dddf0800000000000000
-      internalID: -153882695132609298
+      spriteID: 75e478670f51e8a30800000000000000
+      internalID: 4219334023417646679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_side_12
+      name: walk_side2_4
       rect:
         serializedVersion: 2
-        x: 3724
+        x: 1165
         y: 50
-        width: 362
+        width: 363
         height: 648
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -457,17 +274,59 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 051f50c6593904350800000000000000
-      internalID: 5998956973629239632
+      spriteID: 4dde0c67a4c22fe90800000000000000
+      internalID: -6993478573021401644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_side_13
+      name: walk_side2_5
       rect:
         serializedVersion: 2
-        x: 4148
+        x: 1526
+        y: 490
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79622568f7f832ac0800000000000000
+      internalID: -3881100675986086249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_6
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 50
+        width: 363
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9722fb63142dc3200800000000000000
+      internalID: 161234864211698297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_7
+      rect:
+        serializedVersion: 2
+        x: 1989
         y: 490
         width: 6
         height: 5
@@ -478,101 +337,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d405f3befdf4b6d0800000000000000
-      internalID: -2975474183402355504
+      spriteID: 093d72ef84bf5c610800000000000000
+      internalID: 1640993930166653840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_side_14
+      name: walk_side2_8
       rect:
         serializedVersion: 2
-        x: 4150
-        y: 50
-        width: 363
-        height: 648
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ceea1ba1b55af100800000000000000
-      internalID: 142520559783833286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_15
-      rect:
-        serializedVersion: 2
-        x: 4613
-        y: 490
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56da6f858ade6d090800000000000000
-      internalID: -8009953579928998555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_16
-      rect:
-        serializedVersion: 2
-        x: 4615
-        y: 50
-        width: 363
-        height: 648
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5c37bdeb8f30ba00800000000000000
-      internalID: 770185406501567579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_17
-      rect:
-        serializedVersion: 2
-        x: 5084
-        y: 490
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4729a6ddd5b2d8a60800000000000000
-      internalID: 7677840621883265652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_side_18
-      rect:
-        serializedVersion: 2
-        x: 5086
+        x: 2057
         y: 50
         width: 362
         height: 648
@@ -583,17 +358,101 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12dd2a719798236c0800000000000000
-      internalID: -4165115552183689951
+      spriteID: 4e04c0e8cee3f3f60800000000000000
+      internalID: 8016195047459143908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_side_19
+      name: walk_side2_9
       rect:
         serializedVersion: 2
-        x: 5528
+        x: 2417
+        y: 490
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979248294fdcaa970800000000000000
+      internalID: 8767046074943940985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_10
+      rect:
+        serializedVersion: 2
+        x: 2510
+        y: 50
+        width: 363
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51209d4df949ded0800000000000000
+      internalID: -2388796775066492582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_11
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 490
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa97e85d28f225d0800000000000000
+      internalID: -3088633520773948674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_12
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 50
+        width: 364
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd5e9bb79485b930800000000000000
+      internalID: 4158375618169167352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_13
+      rect:
+        serializedVersion: 2
+        x: 3317
         y: 492
         width: 6
         height: 4
@@ -604,17 +463,122 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a488947176b212810800000000000000
-      internalID: 1738718652914042954
+      spriteID: 373b62a1ef0bd0ac0800000000000000
+      internalID: -3887256297943944333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_side_20
+      name: walk_side2_14
       rect:
         serializedVersion: 2
-        x: 5530
+        x: 3400
+        y: 50
+        width: 372
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5c38630db7a7af0800000000000000
+      internalID: -397869482870848017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_15
+      rect:
+        serializedVersion: 2
+        x: 3850
+        y: 50
+        width: 376
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a1788df35ff8100800000000000000
+      internalID: 112578170272029218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_16
+      rect:
+        serializedVersion: 2
+        x: 4291
+        y: 50
+        width: 375
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f4797abecd945e0800000000000000
+      internalID: -1924764461037039738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_17
+      rect:
+        serializedVersion: 2
+        x: 4733
+        y: 50
+        width: 377
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b51fef615bcec00800000000000000
+      internalID: 931318333329988439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_18
+      rect:
+        serializedVersion: 2
+        x: 5177
+        y: 50
+        width: 373
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1be9d809c7968e70800000000000000
+      internalID: 9117141385350867739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_side2_19
+      rect:
+        serializedVersion: 2
+        x: 5671
         y: 50
         width: 362
         height: 648
@@ -625,13 +589,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1749e93d871c44d00800000000000000
-      internalID: 956101745600009329
+      spriteID: 908a5dccae5bd84d0800000000000000
+      internalID: -3130646145889097719
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>> f182d09d4eef8b396fc8ae0abedb63ed96e7a574
+    - serializedVersion: 2
+      name: walk_side2_20
+      rect:
+        serializedVersion: 2
+        x: 6028
+        y: 492
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c427346e78aba5b0800000000000000
+      internalID: -5356002071026391870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

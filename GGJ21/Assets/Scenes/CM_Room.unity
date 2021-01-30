@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 883350190}
   - component: {fileID: 883350193}
   - component: {fileID: 883350194}
+  - component: {fileID: 883350196}
   - component: {fileID: 883350195}
   m_Layer: 0
   m_Name: Player
@@ -205,7 +206,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 8515642957288914643, guid: 31d1c04cef457414d893c5954ff75e93,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -225,7 +227,7 @@ Transform:
   m_GameObject: {fileID: 883350189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1011279259}
   m_Father: {fileID: 0}
@@ -282,6 +284,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &883350196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883350189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829e77af5dbba744dac43b3e2a127540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1
 --- !u!1 &1011279258
 GameObject:
   m_ObjectHideFlags: 0

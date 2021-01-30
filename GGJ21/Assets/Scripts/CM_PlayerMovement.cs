@@ -18,9 +18,11 @@ public class CM_PlayerMovement : MonoBehaviour
     public Animator animator;
 
     CM_Shooting shooting;
+    CM_Melee melee;
 
     void Start(){
         shooting = GetComponent<CM_Shooting>();
+        melee = GetComponent<CM_Melee>();
         look.Set(0, 1);
 
     }
@@ -52,11 +54,14 @@ public class CM_PlayerMovement : MonoBehaviour
             StartCoroutine(Dash());
             lastFire = Time.time;
         }
-        Debug.Log(Time.time - lastFire);
-  
+        //Debug.Log(Time.time - lastFire);
+
+        if (Input.GetButtonDown("Fire2")){
+            melee.Attack(bulletPoint);
+        }
         animator.SetFloat("Horizontal", look.x);
         animator.SetFloat("Vertical", look.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        animator.SetFloat("Speed", look.sqrMagnitude);
 
     }
 
