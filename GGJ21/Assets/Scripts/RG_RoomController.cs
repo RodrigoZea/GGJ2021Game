@@ -34,13 +34,6 @@ public class RG_RoomController : MonoBehaviour
         instance = this;
     }
 
-    void Start()
-    {
-        // LoadRoom("Room1", 0, 0);
-        // LoadRoom("Room1", 1, 0);
-        // LoadRoom("Room1", 0, 1);
-    }
-
     void Update()
     {
         UpdateRoomQueue();

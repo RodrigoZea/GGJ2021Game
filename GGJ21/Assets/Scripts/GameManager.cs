@@ -138,15 +138,16 @@ public class GameManager : MonoBehaviour
 
         if(lives <= 0)
         {
-            GameOver();
+            StartCoroutine(GameOver());
         }
 
         return lives;
     }
 
-    private void GameOver()
+    private IEnumerator GameOver()
     {
         Debug.Log("TODO: Game Over Event");
+        yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene("GameOver");
     }
 

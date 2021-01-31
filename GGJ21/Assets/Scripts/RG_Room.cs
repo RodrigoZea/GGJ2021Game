@@ -161,8 +161,13 @@ public class RG_Room : MonoBehaviour
     public void EnemyKilled()
     {
         totalEnemies -= 1;
-        if (totalEnemies == 0)
+        if (totalEnemies <= 0)
+        {
             LockDoors(false);
+            
+            if (name.Contains("Final"))
+                FL_Cat.instance.UpdateTrigger();
+        }
     }
 
     public void SpawnEnemies()
