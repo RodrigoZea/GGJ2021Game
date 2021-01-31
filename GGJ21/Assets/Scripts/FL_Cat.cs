@@ -19,8 +19,6 @@ public class FL_Cat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player")
-        {
-            // TODO: Condición de ganar
-        }
+            GameManager.GetInstance().Win();
     }
 }
