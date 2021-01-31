@@ -9,13 +9,13 @@ public class RG_RoomGenerator : MonoBehaviour
     private List<Vector2Int> newRooms;
 
     [SerializeField]
-    private int numberOfRooms = 1;
+    private int numberOfRooms;
 
     private string[] roomNames = new string[]
     {
-        "Room1",
+        // "Room1",
         "Room2",
-        "Room3",
+        // "Room3",
         // "Room4",
         // "Room5",
         // "Room6",

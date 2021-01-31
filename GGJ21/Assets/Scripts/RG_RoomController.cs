@@ -134,5 +134,6 @@ public class RG_RoomController : MonoBehaviour
         RG_CameraController.instance.currentRoom = room;
         currentRoom = room;
         currentRoom.LockDoors(true);
+        currentRoom.SpawnEnemies();
     }
 }

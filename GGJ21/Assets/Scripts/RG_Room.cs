@@ -13,6 +13,8 @@ public class RG_Room : MonoBehaviour
     public RG_Door topDoor;
     public RG_Door bottomDoor;
     public List<RG_Door> doors = new List<RG_Door>();
+    public List<E_Spawn> spawners = new List<E_Spawn>();
+    public List<E_EnemyController> enemies = new List<E_EnemyController>();
     void Start()
     {
         if (RG_RoomController.instance == null)
@@ -22,6 +24,7 @@ public class RG_Room : MonoBehaviour
         }
 
         RG_Door[] _doors = GetComponentsInChildren<RG_Door>();
+        E_Spawn[] _spawners = GetComponentsInChildren<E_Spawn>();
 
         foreach (RG_Door d in _doors)
         {
@@ -44,6 +47,11 @@ public class RG_Room : MonoBehaviour
                     topDoor = d;
                 break;
             }
+        }
+
+        foreach (E_Spawn spawn in _spawners)
+        {
+            spawners.Add(spawn);
         }
 
         RG_RoomController.instance.RegisterRoom(this);
@@ -123,6 +131,15 @@ public class RG_Room : MonoBehaviour
             Transform doorTransform = door.gameObject.transform;
             doorTransform.GetChild(1).gameObject.SetActive(toggle);
         }
+    }
+
+    public void SpawnEnemies()
+    {
+        foreach (E_Spawn spawn in spawners)
+        {
+            spawn.Spawn();
+        }
+        enemies.AddRange(GetComponentsInChildren<E_EnemyController>());
     }
 
     private void OnDrawGizmos() {
