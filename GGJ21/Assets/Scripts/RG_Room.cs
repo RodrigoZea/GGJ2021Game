@@ -164,6 +164,7 @@ public class RG_Room : MonoBehaviour
         if (totalEnemies <= 0)
         {
             LockDoors(false);
+            RG_CameraController.instance.GetComponent<E_Audio>().PlayDoorsOpen();
             
             if (name.Contains("Final"))
                 FL_Cat.instance.UpdateTrigger();

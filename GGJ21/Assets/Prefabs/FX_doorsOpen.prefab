@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5192717363977327849}
   - component: {fileID: 5192717363977327848}
   m_Layer: 0
-  m_Name: doorsOpen
+  m_Name: FX_doorsOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

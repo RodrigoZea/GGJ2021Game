@@ -25,6 +25,7 @@ public class E_Audio : MonoBehaviour
 
     public void PlayDoorsOpen()
     {
+        Debug.Log("Ejecutando audio");
         doorsOpen.Play();
     }
 
