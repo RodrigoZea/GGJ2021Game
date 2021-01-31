@@ -185,7 +185,7 @@ public class E_EnemyController : MonoBehaviour
         boxCollider.enabled = false;
         animator.SetBool("Death", true);
         yield return new WaitForSeconds(1.3f);
-        if(Random.Range(0.0f, 1.0f) > 0.6f)
+        if(Random.Range(0.0f, 1.0f) > 0.75f)
         {
             Instantiate(heartPrefab, transform.position, Quaternion.identity);
         }
