@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 1680099392}
   - component: {fileID: 1680099391}
   - component: {fileID: 1680099394}
+  - component: {fileID: 1680099395}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -471,3 +472,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentRoom: {fileID: 0}
   roomSpeedChange: 100
+--- !u!114 &1680099395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680099390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5185f88a7587b9439b96f1429790db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 6431589025836247884, guid: 9fdb15f152d8c3f4482870c1038c24fd,
+    type: 3}
+  gameTheme: {fileID: 1879122184533924092, guid: fe3bc7d83a0496048adb532a603962dc,
+    type: 3}
+  doorsOpen: {fileID: 5192717363977327848, guid: c20f651ded02a5e40a601ca9272979e7,
+    type: 3}
+  gameWin: {fileID: 7928550006687703554, guid: 1d97ea5a5cb29ba44a3105bdfecccd46, type: 3}
