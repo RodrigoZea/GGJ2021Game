@@ -23,6 +23,7 @@ public class RG_RoomController : MonoBehaviour
     RG_Room currentRoom;
     Queue<RoomInfo> loadRoomQueue = new Queue<RoomInfo>();
     bool isLoadingRoom;
+    bool updatedRooms = false;
 
     void Awake()
     {
@@ -44,7 +45,19 @@ public class RG_RoomController : MonoBehaviour
     void UpdateRoomQueue()
     {
         if (isLoadingRoom) return;
-        if (loadRoomQueue.Count == 0) return;
+
+        if (loadRoomQueue.Count == 0)
+        {
+            if (!updatedRooms)
+            {
+                foreach (RG_Room room in loadedRooms)
+                {
+                    room.RemoveDoors();
+                }
+                updatedRooms = true;
+            }
+            return;
+        }
 
         currentLoadRoomData = loadRoomQueue.Dequeue();
         isLoadingRoom = true;
@@ -96,7 +109,6 @@ public class RG_RoomController : MonoBehaviour
 
             // Add it to the list
             loadedRooms.Add(room);
-            room.RemoveDoors();
         }
         else
         {

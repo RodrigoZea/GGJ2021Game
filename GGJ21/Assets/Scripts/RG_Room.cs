@@ -48,7 +48,7 @@ public class RG_Room : MonoBehaviour
 
         RG_RoomController.instance.RegisterRoom(this);
     }
-
+    
     public void RemoveDoors()
     {
         foreach(RG_Door door in doors)

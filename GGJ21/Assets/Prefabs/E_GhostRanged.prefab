@@ -48,6 +48,27 @@ MonoBehaviour:
     type: 3}
   animator: {fileID: 7907358843051073991}
   health: 5
+--- !u!50 &1038583950
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907358843051073984}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 100000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1001 &4938128206719037704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73,27 +94,27 @@ PrefabInstance:
     - target: {fileID: 2971062429691760845, guid: f1f1ba6bc0c728241a39d7d8710dbb40,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.8764
       objectReference: {fileID: 0}
     - target: {fileID: 2971062429691760845, guid: f1f1ba6bc0c728241a39d7d8710dbb40,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 0.8764
       objectReference: {fileID: 0}
     - target: {fileID: 2971062429691760845, guid: f1f1ba6bc0c728241a39d7d8710dbb40,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 0.8764
       objectReference: {fileID: 0}
     - target: {fileID: 2971062429691760845, guid: f1f1ba6bc0c728241a39d7d8710dbb40,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.83
+      value: 5.48
       objectReference: {fileID: 0}
     - target: {fileID: 2971062429691760845, guid: f1f1ba6bc0c728241a39d7d8710dbb40,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.56
+      value: 2.85
       objectReference: {fileID: 0}
     - target: {fileID: 2971062429691760845, guid: f1f1ba6bc0c728241a39d7d8710dbb40,
         type: 3}
