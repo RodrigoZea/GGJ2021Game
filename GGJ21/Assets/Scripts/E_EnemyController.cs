@@ -36,17 +36,31 @@ public class E_EnemyController : MonoBehaviour
     private bool dead = false;
     private Vector3 randomDirecton;
     private bool coolDownAttack = false;
+    private float oldX;
+    private Vector3 tempDestination;
 
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        oldX = transform.position.x;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (oldX < transform.position.x)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            oldX = transform.position.x;
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            oldX = transform.position.x;
+        }
+
         switch (currentState)
         {
             case(EnemyState.Wander):
@@ -79,6 +93,7 @@ public class E_EnemyController : MonoBehaviour
 
         }
 
+        
     }
 
     private bool IsPlayerInRange(float range)
@@ -90,9 +105,13 @@ public class E_EnemyController : MonoBehaviour
     {
         chooseDirection = true;
         yield return new WaitForSeconds(Random.Range(2f, 8f));
-        randomDirecton = new Vector3(0,0, Random.Range(0, 360));
-        Quaternion nextRotation = Quaternion.Euler(randomDirecton);
+        //randomDirecton = new Vector3(0,0, Random.Range(0, 360));
+        //Quaternion nextRotation = Quaternion.Euler(randomDirecton);
         //transform.rotation = Quaternion.Lerp(transform.rotation, nextRotation, Random.Range(0.5f, 2.5f));
+        tempDestination = new Vector3(transform.position.x - Random.Range(-360,360),
+            transform.position.y - Random.Range(-360, 360),
+            transform.position.z - Random.Range(-360, 360) );
+        
         chooseDirection = false;
     }
 
@@ -103,8 +122,8 @@ public class E_EnemyController : MonoBehaviour
             StartCoroutine(ChooseDirection());
         }
 
-
-        transform.position += -transform.right * speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, tempDestination, speed * Time.deltaTime);
+        //transform.position += -transform.right * speed * Time.deltaTime;
 
         if (IsPlayerInRange(range))
         {
