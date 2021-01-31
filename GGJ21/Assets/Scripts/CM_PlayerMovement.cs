@@ -13,8 +13,6 @@ public class CM_PlayerMovement : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform bulletPoint;
-    public float fireDelay;
-    private float lastFire;
     public Animator animator;
 
     CM_Shooting shooting;
@@ -61,9 +59,9 @@ public class CM_PlayerMovement : MonoBehaviour
                 }
             }
 
-            if (Input.GetButtonDown("Jump") && (Time.time > lastFire + fireDelay)){
+            if (Input.GetButtonDown("Jump") && gameManager.CanDash()){
+                gameManager.UseDash();
                 StartCoroutine(Dash());
-                lastFire = Time.time;
             }
             //Debug.Log(Time.time - lastFire);
 
