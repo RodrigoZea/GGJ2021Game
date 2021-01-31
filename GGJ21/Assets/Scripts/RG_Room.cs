@@ -59,46 +59,30 @@ public class RG_Room : MonoBehaviour
             {
                 case RG_DoorDirection.right:
                     if (GetRight() == null)
-                    {
                         doorTransform.GetChild(0).gameObject.SetActive(false);
-                    }
                     else
-                    {
                         doorTransform.GetChild(1).gameObject.SetActive(false);
-                    }
                 break;
 
                 case RG_DoorDirection.left:
                     if (GetLeft() == null)
-                    {
                         doorTransform.GetChild(0).gameObject.SetActive(false);
-                    }
                     else
-                    {
                         doorTransform.GetChild(1).gameObject.SetActive(false);
-                    }
                 break;
 
                 case RG_DoorDirection.down:
                     if (GetBottom() == null)
-                    {
                         doorTransform.GetChild(0).gameObject.SetActive(false);
-                    }
                     else
-                    {
                         doorTransform.GetChild(1).gameObject.SetActive(false);
-                    }
                 break;
 
                 case RG_DoorDirection.top:
                     if (GetTop() == null)
-                    {
                         doorTransform.GetChild(0).gameObject.SetActive(false);
-                    }
                     else
-                    {
                         doorTransform.GetChild(1).gameObject.SetActive(false);
-                    }
                 break;   
             }
         }
@@ -130,6 +114,15 @@ public class RG_Room : MonoBehaviour
         if (RG_RoomController.instance.RoomExists(X, Y - 1))
             return RG_RoomController.instance.FindRoom(X, Y - 1);
         return null;
+    }
+
+    public void LockDoors(bool toggle)
+    {
+        foreach (RG_Door door in doors)
+        {
+            Transform doorTransform = door.gameObject.transform;
+            doorTransform.GetChild(1).gameObject.SetActive(toggle);
+        }
     }
 
     private void OnDrawGizmos() {

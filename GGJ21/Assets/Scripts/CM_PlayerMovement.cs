@@ -20,6 +20,12 @@ public class CM_PlayerMovement : MonoBehaviour
 
     CM_Shooting shooting;
     CM_Melee melee;
+    public static CM_PlayerMovement instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start(){
         shooting = GetComponent<CM_Shooting>();
