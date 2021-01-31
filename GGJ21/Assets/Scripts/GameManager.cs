@@ -32,8 +32,8 @@ public class GameManager : MonoBehaviour
     private bool shieldReady;
     private bool bombReady;
 
-    private float dashCooldown = 3.0f;
-    private float meleeCooldown = 5.0f;
+    private float dashCooldown = 5.0f;
+    private float meleeCooldown = 10.0f;
     private float shieldCooldown = 15.0f;
     private float bombCooldown = 20.0f;
 

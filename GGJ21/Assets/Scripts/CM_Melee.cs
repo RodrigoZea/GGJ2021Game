@@ -11,7 +11,7 @@ public class CM_Melee : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             if (enemy.gameObject.tag == "Enemy"){
-                enemy.gameObject.GetComponent<E_EnemyController>().Damage(1);
+                enemy.gameObject.GetComponent<E_EnemyController>().Damage(5);
             }
         }
     }
