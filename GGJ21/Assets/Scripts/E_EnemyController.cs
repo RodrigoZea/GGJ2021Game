@@ -35,17 +35,19 @@ public class E_EnemyController : MonoBehaviour
     public Animator animator;
     public int health;
     private bool chooseDirection = false;
-    private bool dead = false;
+    private bool isDead = false;
     private Vector3 randomDirecton;
     private bool coolDownAttack = false;
     private float oldX;
     private Vector3 tempDestination;
     private RG_Room currentRoom;
+    private BoxCollider2D boxCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        boxCollider = GetComponent<BoxCollider2D>();
         currentRoom = RG_CameraController.instance.currentRoom;
         oldX = transform.position.x;
     }
@@ -177,6 +179,8 @@ public class E_EnemyController : MonoBehaviour
     }
 
     private IEnumerator Death(){
+        isDead = true;
+        boxCollider.enabled = false;
         animator.SetBool("Death", true);
         yield return new WaitForSeconds(1.3f);
         Destroy(gameObject);
@@ -184,12 +188,16 @@ public class E_EnemyController : MonoBehaviour
 
     public void Damage(int damage)
     {
-        health -= damage;
-        print(health);
-        if(health <= 0)
+        if (!isDead)
         {
-            currentRoom.EnemyKilled();
-            StartCoroutine(Death());
+            if (health > 0)
+                health -= damage;
+
+            if(health == 0)
+            {
+                currentRoom.EnemyKilled();
+                StartCoroutine(Death());
+            }
         }
     }
 

@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &223478548
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 3
+  spriteRenderer: {fileID: 0}
 --- !u!1 &466530945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,6 +3541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 2
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1567362514
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,6 +4367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 1
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1923172225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,12 +4402,15 @@ MonoBehaviour:
   height: 10
   X: 0
   Y: 0
+  totalEnemies: 0
+  doorsUnlocked: 0
   leftDoor: {fileID: 0}
   rightDoor: {fileID: 0}
   topDoor: {fileID: 0}
   bottomDoor: {fileID: 0}
   doors: []
   spawners: []
+  enemies: []
 --- !u!4 &1923172227
 Transform:
   m_ObjectHideFlags: 0
