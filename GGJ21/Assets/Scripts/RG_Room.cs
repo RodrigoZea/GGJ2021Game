@@ -141,21 +141,33 @@ public class RG_Room : MonoBehaviour
         return null;
     }
 
-    public void LockDoors(bool toggle)
+    public void LockDoors(bool locked)
     {
         foreach (RG_Door door in doors)
         {
             Transform doorTransform = door.gameObject.transform;
             if (doorTransform.GetChild(0).gameObject.activeSelf)
-                doorTransform.GetChild(1).gameObject.SetActive(toggle);
+            {
+                if (!locked)
+                    door.spriteRenderer.sprite = RG_RoomController.instance.doorSprites[0];
+                else
+                    door.spriteRenderer.sprite = RG_RoomController.instance.doorSprites[1];
+
+                doorTransform.GetChild(1).gameObject.SetActive(locked);
+            }
         }
     }
 
     public void EnemyKilled()
     {
         totalEnemies -= 1;
-        if (totalEnemies == 0)
+        if (totalEnemies <= 0)
+        {
             LockDoors(false);
+            
+            if (name.Contains("Final"))
+                FL_Cat.instance.UpdateTrigger();
+        }
     }
 
     public void SpawnEnemies()

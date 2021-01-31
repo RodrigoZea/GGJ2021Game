@@ -14,7 +14,6 @@ public class CM_PlayerMovement : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletPoint;
     public float fireDelay;
-    public int health = 10;
     private float lastFire;
     public Animator animator;
 
@@ -22,12 +21,16 @@ public class CM_PlayerMovement : MonoBehaviour
     CM_Melee melee;
     public static CM_PlayerMovement instance;
 
+    private GameManager gameManager;
+
     void Awake()
     {
         instance = this;
     }
 
     void Start(){
+        gameManager = GameManager.GetInstance();
+
         shooting = GetComponent<CM_Shooting>();
         melee = GetComponent<CM_Melee>();
         look.Set(0, 1);
@@ -37,7 +40,7 @@ public class CM_PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health > 0){
+        if (gameManager.GetLives() > 0){
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
@@ -71,6 +74,14 @@ public class CM_PlayerMovement : MonoBehaviour
             animator.SetFloat("Vertical", look.y);
             animator.SetFloat("Speed", look.sqrMagnitude);
         }
+        else
+        {
+            movement.x = 0;
+            movement.y = 0;
+
+            shoot.x = 0;
+            shoot.y = 0;
+        }
 
     }
 
@@ -92,13 +103,12 @@ public class CM_PlayerMovement : MonoBehaviour
 
     private void Death(){
         animator.SetBool("Death", true);
-
     }
 
     public void Damage(int damage){
-        health -= damage;
-        print(health);
-        if(health <= 0)
+        int lives = gameManager.DamagePlayer(damage);
+
+        if(lives <= 0)
         {
             Death();
         }
