@@ -1949,6 +1949,98 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 3
+  spriteRenderer: {fileID: 0}
+--- !u!1001 &813434677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923172227}
+    m_Modifications:
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519294, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: xRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519294, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274662346336519294, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 7210400708864999284, guid: 0a314b101f9a3274ba80093ad56cffb8,
+        type: 3}
+    - target: {fileID: 5274662346336519295, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+        type: 3}
+      propertyPath: m_Name
+      value: E_EnemiesSpawn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40adcf5147e7f8d408a0f8c0708b4e0c, type: 3}
+--- !u!4 &813434678 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5274662346336519293, guid: 40adcf5147e7f8d408a0f8c0708b4e0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 813434677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &845065834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,6 +2144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 2
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1125600834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3581,6 +3674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 1
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1569933188
 GameObject:
   m_ObjectHideFlags: 0
@@ -4241,6 +4335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1918714574
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,11 +4404,15 @@ MonoBehaviour:
   height: 10
   X: 0
   Y: 0
+  totalEnemies: 0
+  doorsUnlocked: 0
   leftDoor: {fileID: 0}
   rightDoor: {fileID: 0}
   topDoor: {fileID: 0}
   bottomDoor: {fileID: 0}
   doors: []
+  spawners: []
+  enemies: []
 --- !u!4 &1923172227
 Transform:
   m_ObjectHideFlags: 0
@@ -4327,6 +4426,7 @@ Transform:
   m_Children:
   - {fileID: 658108878}
   - {fileID: 1918714575}
+  - {fileID: 813434678}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
