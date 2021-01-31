@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TEST_GM/TEST_MENU.unity
+    path: Assets/Scenes/FINAL/Menu.unity
     guid: 779f9d521206271498c63e1d0a7ea991
   - enabled: 1
-    path: Assets/Scenes/TEST_GM/TEST_LEVEL.unity
+    path: Assets/Scenes/FINAL/Level.unity
     guid: 5ed9a33a7e1350c4b99c99965200e42c
   - enabled: 1
     path: Assets/Scenes/RoomGeneration.unity
@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/RG_Final.unity
     guid: bcc02212aa54ac04a95aeabbd54490da
+  - enabled: 1
+    path: Assets/Scenes/FINAL/GameOver.unity
+    guid: 3103c8e36541f5040a237f9f5a54f847
   m_configObjects: {}

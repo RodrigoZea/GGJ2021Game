@@ -19,6 +19,6 @@ public class UI_Menu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("TEST_LEVEL");
+        SceneManager.LoadScene("Level");
     }
 }

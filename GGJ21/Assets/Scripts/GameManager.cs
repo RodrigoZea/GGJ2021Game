@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -131,7 +132,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void DamagePlayer(int damage)
+    public int DamagePlayer(int damage)
     {
         lives-=damage;
 
@@ -140,12 +141,18 @@ public class GameManager : MonoBehaviour
             GameOver();
         }
 
-        Debug.Log("TODO: Damage Player Event");
+        return lives;
     }
 
-    public void GameOver()
+    private void GameOver()
     {
         Debug.Log("TODO: Game Over Event");
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void Win()
+    {
+        Debug.Log("TODO: Win Event");
     }
 
     public void QuitGame()
