@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
             hasDash = true;
             hasShield = true;
             hasBomb = true;
+            hasMelee = true;
 
             dashReady = false;
             meleeReady = false;
