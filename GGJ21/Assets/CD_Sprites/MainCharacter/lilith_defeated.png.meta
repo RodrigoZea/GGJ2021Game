@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: c4df667a73f8ec441a0184932a87fe0a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2586170660985612682
+    second: lilith_defeated_0
+  - first:
+      213: 1529190503206928114
+    second: lilith_defeated_1
+  - first:
+      213: 4215098685299808390
+    second: lilith_defeated_2
+  - first:
+      213: -7199986159320264342
+    second: lilith_defeated_3
+  - first:
+      213: 6811883542375813558
+    second: lilith_defeated_4
+  - first:
+      213: 8529164618651768738
+    second: lilith_defeated_5
+  - first:
+      213: 6137208220553573908
+    second: lilith_defeated_6
+  - first:
+      213: 3555783668874020427
+    second: lilith_defeated_7
+  - first:
+      213: 6739502719639918384
+    second: lilith_defeated_8
+  - first:
+      213: -8372060252037870505
+    second: lilith_defeated_9
+  - first:
+      213: -4454132151905235458
+    second: lilith_defeated_10
+  - first:
+      213: 3355552774873494234
+    second: lilith_defeated_11
+  - first:
+      213: 182579004125450111
+    second: lilith_defeated_12
+  - first:
+      213: 1534341603484411112
+    second: lilith_defeated_13
+  - first:
+      213: -940715420875992085
+    second: lilith_defeated_14
+  - first:
+      213: 3538068657611723896
+    second: lilith_defeated_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +89,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +121,381 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: lilith_defeated_0
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 56
+        width: 391
+        height: 636
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6765a676c731c1cd0800000000000000
+      internalID: -2586170660985612682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_1
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 492
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2febc8129a6c83510800000000000000
+      internalID: 1529190503206928114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_2
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 51
+        width: 361
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688d286fbe90f7a30800000000000000
+      internalID: 4215098685299808390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_3
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 40
+        width: 394
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a619cf93cb2841c90800000000000000
+      internalID: -7199986159320264342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_4
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 51
+        width: 362
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1d3aaadfba88e50800000000000000
+      internalID: 6811883542375813558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_5
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 492
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7919df70ead5670800000000000000
+      internalID: 8529164618651768738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_6
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 56
+        width: 390
+        height: 636
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416f3ba3c5ebb2550800000000000000
+      internalID: 6137208220553573908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_7
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 492
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b460f51586ea85130800000000000000
+      internalID: 3555783668874020427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_8
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 51
+        width: 362
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0379aee1406878d50800000000000000
+      internalID: 6739502719639918384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_9
+      rect:
+        serializedVersion: 2
+        x: 2717
+        y: 40
+        width: 393
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c8d1fce8770db80800000000000000
+      internalID: -8372060252037870505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_10
+      rect:
+        serializedVersion: 2
+        x: 3156
+        y: 51
+        width: 364
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdca07286ebf22c0800000000000000
+      internalID: -4454132151905235458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_11
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 493
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad239636871519e20800000000000000
+      internalID: 3355552774873494234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_12
+      rect:
+        serializedVersion: 2
+        x: 3535
+        y: 67
+        width: 596
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f875c03a6a88200800000000000000
+      internalID: 182579004125450111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_13
+      rect:
+        serializedVersion: 2
+        x: 4173
+        y: 82
+        width: 657
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4aacf1f831b4510800000000000000
+      internalID: 1534341603484411112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_14
+      rect:
+        serializedVersion: 2
+        x: 4907
+        y: 56
+        width: 650
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be354ff0f48e1f2f0800000000000000
+      internalID: -940715420875992085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lilith_defeated_15
+      rect:
+        serializedVersion: 2
+        x: 5358
+        y: 54
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874d3e7d2beb91130800000000000000
+      internalID: 3538068657611723896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

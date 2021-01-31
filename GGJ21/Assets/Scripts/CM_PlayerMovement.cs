@@ -14,6 +14,7 @@ public class CM_PlayerMovement : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletPoint;
     public float fireDelay;
+    public int health = 10;
     private float lastFire;
     public Animator animator;
 
@@ -30,38 +31,40 @@ public class CM_PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if (health > 0){
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
 
-        shoot.x = Input.GetAxisRaw("ShootHorizontal");
-        shoot.y = Input.GetAxisRaw("ShootVertical");
+            shoot.x = Input.GetAxisRaw("ShootHorizontal");
+            shoot.y = Input.GetAxisRaw("ShootVertical");
 
-        look = movement;
-        if (shoot.x != 0 || shoot.y != 0){
-            if (Input.GetButtonDown("ShootHorizontal")){
-                look.Set(shoot.x, 0);
-                MoveBulletPoint();
-                shooting.Shoot(bulletPoint, bulletPrefab);
-            } else 
-            if (Input.GetButtonDown("ShootVertical")) {
-                look.Set(0, shoot.y);
-                MoveBulletPoint();
-                shooting.Shoot(bulletPoint, bulletPrefab);
+            look = movement;
+            if (shoot.x != 0 || shoot.y != 0){
+                if (Input.GetButtonDown("ShootHorizontal")){
+                    look.Set(shoot.x, 0);
+                    MoveBulletPoint();
+                    shooting.Shoot(bulletPoint, bulletPrefab);
+                } else 
+                if (Input.GetButtonDown("ShootVertical")) {
+                    look.Set(0, shoot.y);
+                    MoveBulletPoint();
+                    shooting.Shoot(bulletPoint, bulletPrefab);
+                }
             }
-        }
 
-        if (Input.GetButtonDown("Jump") && (Time.time > lastFire + fireDelay)){
-            StartCoroutine(Dash());
-            lastFire = Time.time;
-        }
-        //Debug.Log(Time.time - lastFire);
+            if (Input.GetButtonDown("Jump") && (Time.time > lastFire + fireDelay)){
+                StartCoroutine(Dash());
+                lastFire = Time.time;
+            }
+            //Debug.Log(Time.time - lastFire);
 
-        if (Input.GetButtonDown("Fire2")){
-            melee.Attack(bulletPoint);
+            if (Input.GetButtonDown("Fire2")){
+                melee.Attack(bulletPoint);
+            }
+            animator.SetFloat("Horizontal", look.x);
+            animator.SetFloat("Vertical", look.y);
+            animator.SetFloat("Speed", look.sqrMagnitude);
         }
-        animator.SetFloat("Horizontal", look.x);
-        animator.SetFloat("Vertical", look.y);
-        animator.SetFloat("Speed", look.sqrMagnitude);
 
     }
 
@@ -79,6 +82,20 @@ public class CM_PlayerMovement : MonoBehaviour
         moveSpeed = 20f;
         yield return new WaitForSeconds(0.3f);
         moveSpeed = 5f;
+    }
+
+    private void Death(){
+        animator.SetBool("Death", true);
+
+    }
+
+    public void Damage(int damage){
+        health -= damage;
+        print(health);
+        if(health <= 0)
+        {
+            Death();
+        }
     }
 
     

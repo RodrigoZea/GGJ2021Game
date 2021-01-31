@@ -46,6 +46,7 @@ public class E_BulletController : MonoBehaviour
         if (col.tag == "Player")
         {
             Debug.Log("Bala choca");
+            col.gameObject.GetComponent<CM_PlayerMovement>().Damage(1);
             Destroy(gameObject);
         }
         

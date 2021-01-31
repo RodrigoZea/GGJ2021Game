@@ -32,6 +32,7 @@ public class E_EnemyController : MonoBehaviour
     public float attackRange = 0.5f; 
     public float coolDown;
     public GameObject bulletPrefab; 
+    public Animator animator;
     public int health;
     private bool chooseDirection = false;
     private bool dead = false;
@@ -173,18 +174,19 @@ public class E_EnemyController : MonoBehaviour
 
     }
 
-    public void Death()
-    {
+    private IEnumerator Death(){
+        animator.SetBool("Death", true);
+        yield return new WaitForSeconds(1.3f);
         Destroy(gameObject);
     }
 
     public void Damage(int damage)
     {
         health -= damage;
-
+        print(health);
         if(health <= 0)
         {
-            Death();
+            StartCoroutine(Death());
         }
     }
 

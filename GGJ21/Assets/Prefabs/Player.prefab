@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2869217279117950918}
   - component: {fileID: 2869217279117950912}
   - component: {fileID: 2869217279117950919}
+  - component: {fileID: 3050793671741283344}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -128,6 +129,7 @@ MonoBehaviour:
     type: 3}
   bulletPoint: {fileID: 2869217279262638319}
   fireDelay: 3
+  health: 10
   animator: {fileID: 2869217279117950919}
 --- !u!114 &2869217279117950918
 MonoBehaviour:
@@ -174,6 +176,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &3050793671741283344
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2869217279117950937}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.090702295, y: 0.030243516}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.915871, y: 6.3599997}
+    newSize: {x: 3.915871, y: 6.3599997}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.1902518, y: 5.9970856}
+  m_EdgeRadius: 0
 --- !u!1 &2869217279262638318
 GameObject:
   m_ObjectHideFlags: 0

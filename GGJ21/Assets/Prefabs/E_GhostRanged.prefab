@@ -46,6 +46,7 @@ MonoBehaviour:
   coolDown: 2
   bulletPrefab: {fileID: 9126619776139611075, guid: c0490ecb7d8e1894c8947058944db4b6,
     type: 3}
+  animator: {fileID: 7907358843051073991}
   health: 5
 --- !u!1001 &4938128206719037704
 PrefabInstance:
@@ -139,6 +140,12 @@ PrefabInstance:
 --- !u!1 &7907358843051073984 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2971062429691760840, guid: f1f1ba6bc0c728241a39d7d8710dbb40,
+    type: 3}
+  m_PrefabInstance: {fileID: 4938128206719037704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7907358843051073991 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2971062429691760847, guid: f1f1ba6bc0c728241a39d7d8710dbb40,
     type: 3}
   m_PrefabInstance: {fileID: 4938128206719037704}
   m_PrefabAsset: {fileID: 0}
