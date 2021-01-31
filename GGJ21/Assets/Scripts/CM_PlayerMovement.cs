@@ -64,10 +64,15 @@ public class CM_PlayerMovement : MonoBehaviour
                 StartCoroutine(Dash());
             }
             //Debug.Log(Time.time - lastFire);
-
-            if (Input.GetButtonDown("Fire2")){
-                melee.Attack(bulletPoint);
+        
+            if (Input.GetButtonDown("Fire2") && gameManager.CanMelee()){
+                Debug.Log("Attack");
+                gameManager.UseMelee();
+                StartCoroutine(Attack());
+                melee.Attack(transform);
+                
             }
+            
             animator.SetFloat("Horizontal", look.x);
             animator.SetFloat("Vertical", look.y);
             animator.SetFloat("Speed", look.sqrMagnitude);
@@ -98,7 +103,12 @@ public class CM_PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         moveSpeed = 5f;
     }
-
+    
+    IEnumerator Attack(){
+        animator.SetBool("Attack", true);
+        yield return new WaitForSeconds(0.8f);
+        animator.SetBool("Attack", false);
+    }
     private void Death(){
         animator.SetBool("Death", true);
     }
