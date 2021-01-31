@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
         return instance;
     }
 
-
     private bool initializedGame = false;
 
     private int currentLevel;
@@ -26,6 +25,17 @@ public class GameManager : MonoBehaviour
     private bool hasShield;
     private bool hasBomb;
 
+    private bool dashReady;
+    private bool shieldReady;
+    private bool bombReady;
+
+    private float dashCooldown = 5.0f;
+    private float shieldCooldown = 15.0f;
+    private float bombCooldown = 20.0f;
+
+    private float dashTimer;
+    private float shieldTimer;
+    private float bombTimer;
 
     private void Awake()
     {
@@ -53,6 +63,14 @@ public class GameManager : MonoBehaviour
             hasShield = true;
             hasBomb = true;
 
+            dashReady = false;
+            shieldReady = false;
+            bombReady = false;
+
+            dashTimer = dashCooldown;
+            shieldTimer = shieldCooldown;
+            bombTimer = bombCooldown;
+
             NextLevel();
 
             initializedGame = true;
@@ -61,17 +79,54 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        // Cooldowns
+        if (!dashReady)
+        {
+            dashTimer -= Time.deltaTime;
+            if(dashTimer <= 0)
+            {
+                dashReady = true;
+                dashTimer = 0;
+            }
+        }
 
+        if (!shieldReady)
+        {
+            shieldTimer -= Time.deltaTime;
+            if (shieldTimer <= 0)
+            {
+                shieldReady = true;
+                shieldTimer = 0;
+            }
+        }
+
+        if (!bombReady)
+        {
+            bombTimer -= Time.deltaTime;
+            if (bombTimer <= 0)
+            {
+                bombReady = true;
+                bombTimer = 0;
+            }
+        }
     }
 
-    public void DamagePlayer()
+    public void DamagePlayer(int damage)
     {
-        lives--;
+        lives-=damage;
 
+        if(lives <= 0)
+        {
+            GameOver();
+        }
 
         Debug.Log("TODO: Damage Player Event");
     }
 
+    public void GameOver()
+    {
+        Debug.Log("TODO: Game Over Event");
+    }
 
     public void QuitGame()
     {
@@ -84,5 +139,100 @@ public class GameManager : MonoBehaviour
         // GENERATE MAP
 
         Debug.Log("TODO: Advance Level");
+    }
+
+    // USE PLAYER ACTION
+
+    public void UseDash()
+    {
+        if (!hasDash || !dashReady)
+        {
+            return;
+        }
+
+        dashTimer = dashCooldown;
+        dashReady = false;
+    }
+
+    public void UseShield()
+    {
+        if (!hasShield || !shieldReady)
+        {
+            return;
+        }
+
+        shieldTimer = shieldCooldown;
+        shieldReady = false;
+    }
+
+    public void UseBomb()
+    {
+        if (!hasBomb || !bombReady)
+        {
+            return;
+        }
+
+        bombTimer = bombCooldown;
+        bombReady = false;
+    }
+
+    // GETS UI
+
+    public int GetLives()
+    {
+        return lives;
+    }
+
+    public float GetDashCooldown()
+    {
+        return dashTimer;
+    }
+
+    public float GetShieldCooldown()
+    {
+        return shieldTimer;
+    }
+
+    public float GetBombCooldown()
+    {
+        return bombTimer;
+    }
+
+    // GETS FOR PLAYER
+
+    public bool CanDash()
+    {
+        if(hasDash && dashReady)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool CanShield()
+    {
+        if (hasShield && shieldReady)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool CanBomb()
+    {
+        if (hasBomb && bombReady)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
