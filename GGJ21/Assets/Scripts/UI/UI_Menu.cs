@@ -21,4 +21,9 @@ public class UI_Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Level");
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
