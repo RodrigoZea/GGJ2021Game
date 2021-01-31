@@ -181,6 +181,7 @@ public class E_EnemyController : MonoBehaviour
 
     private IEnumerator Death(){
         isDead = true;
+        currentState = EnemyState.Die;
         boxCollider.enabled = false;
         animator.SetBool("Death", true);
         yield return new WaitForSeconds(1.3f);
