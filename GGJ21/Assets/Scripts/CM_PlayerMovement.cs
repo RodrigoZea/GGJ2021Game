@@ -17,6 +17,8 @@ public class CM_PlayerMovement : MonoBehaviour
 
     CM_Shooting shooting;
     CM_Melee melee;
+
+    private bool isAttacking;
     public static CM_PlayerMovement instance;
 
     private GameManager gameManager;
@@ -69,8 +71,11 @@ public class CM_PlayerMovement : MonoBehaviour
                 Debug.Log("Attack");
                 gameManager.UseMelee();
                 StartCoroutine(Attack());
+            }
+
+            if (isAttacking)
+            {
                 melee.Attack(transform);
-                
             }
             
             animator.SetFloat("Horizontal", look.x);
@@ -106,14 +111,22 @@ public class CM_PlayerMovement : MonoBehaviour
     
     IEnumerator Attack(){
         animator.SetBool("Attack", true);
-        yield return new WaitForSeconds(0.8f);
+        isAttacking = true;
+        yield return new WaitForSeconds(0.5f);
         animator.SetBool("Attack", false);
+        isAttacking = false;
     }
     private void Death(){
         animator.SetBool("Death", true);
     }
 
     public void Damage(int damage){
+
+        if (isAttacking)
+        {
+            return;
+        }
+
         int lives = gameManager.DamagePlayer(damage);
 
         if(lives <= 0)

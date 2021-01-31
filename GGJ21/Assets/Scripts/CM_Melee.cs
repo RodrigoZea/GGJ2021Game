@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CM_Melee : MonoBehaviour
 {
-    public float attackRange = 1f;
+    public float attackRange = 2.0f;
     // Start is called before the first frame update
     public void Attack(Transform attackPoint){
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
         foreach(Collider2D enemy in hitEnemies)
         {
-            if (enemy.gameObject.tag == "Enemy"){
+            if (enemy.gameObject.tag == "Enemy" && !enemy.gameObject.GetComponent<E_EnemyController>().isBoss){
                 enemy.gameObject.GetComponent<E_EnemyController>().Damage(5);
             }
         }

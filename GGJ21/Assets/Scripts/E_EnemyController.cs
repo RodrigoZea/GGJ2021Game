@@ -35,6 +35,7 @@ public class E_EnemyController : MonoBehaviour
     public Animator animator;
     public int health;
     public GameObject heartPrefab;
+    public bool isBoss;
     private bool chooseDirection = false;
     private bool isDead = false;
     private Vector3 randomDirecton;
@@ -164,8 +165,6 @@ public class E_EnemyController : MonoBehaviour
                     bullet.GetComponent<E_BulletController>().isEnemyBullet = true;
                     StartCoroutine(CoolDown());
                     break;
-
-                
             }
         }     
 
