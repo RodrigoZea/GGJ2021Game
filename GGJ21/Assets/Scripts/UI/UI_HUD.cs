@@ -10,6 +10,7 @@ public class UI_HUD : MonoBehaviour
     public GameObject heart3;
 
     public UI_Cooldown dashIcon;
+    public UI_Cooldown meleeIcon;
     public UI_Cooldown shieldIcon;
     public UI_Cooldown bombIcon;
 
@@ -25,6 +26,7 @@ public class UI_HUD : MonoBehaviour
     void Update()
     {
         UpdateDashCooldown(gameManager.GetDashCooldown());
+        UpdateMeleeCooldown(gameManager.GetMeleeCooldown());
         UpdateShieldCooldown(gameManager.GetShieldCooldown());
         UpdateBombCooldown(gameManager.GetBombCooldown());
         UpdateUILives(gameManager.GetLives());
@@ -87,6 +89,18 @@ public class UI_HUD : MonoBehaviour
         else
         {
             dashIcon.SetCooldown(cooldown);
+        }
+    }
+
+    private void UpdateMeleeCooldown(float cooldown)
+    {
+        if (cooldown < 0.1f)
+        {
+            meleeIcon.SetEnabled();
+        }
+        else
+        {
+            meleeIcon.SetCooldown(cooldown);
         }
     }
 

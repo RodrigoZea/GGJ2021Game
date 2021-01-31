@@ -22,20 +22,28 @@ public class GameManager : MonoBehaviour
 
     // ATTACKS
     private bool hasDash;
+    private bool hasMelee;
     private bool hasShield;
     private bool hasBomb;
 
     private bool dashReady;
+    private bool meleeReady;
     private bool shieldReady;
     private bool bombReady;
 
-    private float dashCooldown = 5.0f;
+    private float dashCooldown = 3.0f;
+    private float meleeCooldown = 5.0f;
     private float shieldCooldown = 15.0f;
     private float bombCooldown = 20.0f;
 
     private float dashTimer;
+    private float meleeTimer;
     private float shieldTimer;
     private float bombTimer;
+
+
+    // POWERUPS
+    private bool doubleShootActive;
 
     private void Awake()
     {
@@ -64,10 +72,12 @@ public class GameManager : MonoBehaviour
             hasBomb = true;
 
             dashReady = false;
+            meleeReady = false;
             shieldReady = false;
             bombReady = false;
 
             dashTimer = dashCooldown;
+            meleeTimer = meleeCooldown;
             shieldTimer = shieldCooldown;
             bombTimer = bombCooldown;
 
@@ -87,6 +97,16 @@ public class GameManager : MonoBehaviour
             {
                 dashReady = true;
                 dashTimer = 0;
+            }
+        }
+
+        if (!meleeReady)
+        {
+            meleeTimer -= Time.deltaTime;
+            if (meleeTimer <= 0)
+            {
+                meleeReady = true;
+                meleeTimer = 0;
             }
         }
 
@@ -154,6 +174,17 @@ public class GameManager : MonoBehaviour
         dashReady = false;
     }
 
+    public void UseMelee()
+    {
+        if (!hasMelee || !meleeReady)
+        {
+            return;
+        }
+
+        meleeTimer = meleeCooldown;
+        meleeReady = false;
+    }
+
     public void UseShield()
     {
         if (!hasShield || !shieldReady)
@@ -188,6 +219,11 @@ public class GameManager : MonoBehaviour
         return dashTimer;
     }
 
+    public float GetMeleeCooldown()
+    {
+        return meleeTimer;
+    }
+
     public float GetShieldCooldown()
     {
         return shieldTimer;
@@ -203,6 +239,18 @@ public class GameManager : MonoBehaviour
     public bool CanDash()
     {
         if(hasDash && dashReady)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool CanMelee()
+    {
+        if (hasMelee && meleeReady)
         {
             return true;
         }
