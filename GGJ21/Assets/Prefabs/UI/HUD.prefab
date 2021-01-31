@@ -1228,6 +1228,7 @@ MonoBehaviour:
   meleeIcon: {fileID: 8552753132043895342}
   shieldIcon: {fileID: 270586064393615963}
   bombIcon: {fileID: 1968268947528708171}
+  blackScreen: {fileID: 4565884312187223177}
 --- !u!1 &4828835143642174275
 GameObject:
   m_ObjectHideFlags: 0

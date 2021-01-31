@@ -14,12 +14,18 @@ public class UI_HUD : MonoBehaviour
     public UI_Cooldown shieldIcon;
     public UI_Cooldown bombIcon;
 
+    public Image blackScreen;
+
+    private float revealTimer = 1.5f;
+
     private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameManager.GetInstance();
+
+        blackScreen.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -30,6 +36,17 @@ public class UI_HUD : MonoBehaviour
         UpdateShieldCooldown(gameManager.GetShieldCooldown());
         UpdateBombCooldown(gameManager.GetBombCooldown());
         UpdateUILives(gameManager.GetLives());
+
+        if(revealTimer > 0.0f)
+        {
+            revealTimer -= Time.deltaTime;
+            blackScreen.color = new Color(0,0,0,revealTimer);
+        }
+        else
+        {
+            blackScreen.gameObject.SetActive(false);
+        }
+        
     }
 
     public void UpdateUILives(int lives)
