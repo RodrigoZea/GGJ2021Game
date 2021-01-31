@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 0
+  spriteRenderer: {fileID: 783499387}
 --- !u!1 &459321430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,6 +2250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 3
+  spriteRenderer: {fileID: 1409943939}
 --- !u!1 &1124110623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,6 +2522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 2
+  spriteRenderer: {fileID: 1371756799}
 --- !u!1 &1371756797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,3 +4374,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 1
+  spriteRenderer: {fileID: 1124110625}

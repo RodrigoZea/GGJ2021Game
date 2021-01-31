@@ -141,13 +141,20 @@ public class RG_Room : MonoBehaviour
         return null;
     }
 
-    public void LockDoors(bool toggle)
+    public void LockDoors(bool locked)
     {
         foreach (RG_Door door in doors)
         {
             Transform doorTransform = door.gameObject.transform;
             if (doorTransform.GetChild(0).gameObject.activeSelf)
-                doorTransform.GetChild(1).gameObject.SetActive(toggle);
+            {
+                if (!locked)
+                    door.spriteRenderer.sprite = RG_RoomController.instance.doorSprites[0];
+                else
+                    door.spriteRenderer.sprite = RG_RoomController.instance.doorSprites[1];
+
+                doorTransform.GetChild(1).gameObject.SetActive(locked);
+            }
         }
     }
 

@@ -26,6 +26,8 @@ public class RG_RoomController : MonoBehaviour
     bool isLoadingRoom;
     bool updatedRooms = false;
     bool spawnedFinalRoom = false;
+    [SerializeField]
+    public Sprite[] doorSprites;
 
     void Awake()
     {
