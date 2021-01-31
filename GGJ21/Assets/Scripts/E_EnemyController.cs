@@ -34,6 +34,7 @@ public class E_EnemyController : MonoBehaviour
     public GameObject bulletPrefab; 
     public Animator animator;
     public int health;
+    public GameObject heartPrefab;
     private bool chooseDirection = false;
     private bool isDead = false;
     private Vector3 randomDirecton;
@@ -183,6 +184,10 @@ public class E_EnemyController : MonoBehaviour
         boxCollider.enabled = false;
         animator.SetBool("Death", true);
         yield return new WaitForSeconds(1.3f);
+        if(Random.Range(0.0f, 1.0f) > 0.4f)
+        {
+            Instantiate(heartPrefab, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 

@@ -61,13 +61,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   enemyType: 0
-  range: 0.5
+  range: 8
   speed: 1
   attackRange: 0.5
   coolDown: 2
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1631892937019040145, guid: d92da1951e3081a40a3cc2b2f32d22ef,
+    type: 3}
   animator: {fileID: 7210400708864999283}
   health: 5
+  heartPrefab: {fileID: 1631892937019040145, guid: d92da1951e3081a40a3cc2b2f32d22ef,
+    type: 3}
 --- !u!1001 &5560582935042994108
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -69,6 +69,8 @@ MonoBehaviour:
     type: 3}
   animator: {fileID: 7907358843051073991}
   health: 5
+  heartPrefab: {fileID: 1631892937019040145, guid: d92da1951e3081a40a3cc2b2f32d22ef,
+    type: 3}
 --- !u!1001 &4938128206719037704
 PrefabInstance:
   m_ObjectHideFlags: 0
