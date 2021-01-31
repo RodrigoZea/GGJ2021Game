@@ -92,7 +92,7 @@ public class E_EnemyController : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(2f, 8f));
         randomDirecton = new Vector3(0,0, Random.Range(0, 360));
         Quaternion nextRotation = Quaternion.Euler(randomDirecton);
-        transform.rotation = Quaternion.Lerp(transform.rotation, nextRotation, Random.Range(0.5f, 2.5f));
+        //transform.rotation = Quaternion.Lerp(transform.rotation, nextRotation, Random.Range(0.5f, 2.5f));
         chooseDirection = false;
     }
 
