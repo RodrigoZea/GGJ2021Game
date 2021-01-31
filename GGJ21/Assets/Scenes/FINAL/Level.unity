@@ -268,7 +268,7 @@ MonoBehaviour:
   loadedRooms: []
   doorSprites:
   - {fileID: 8681697917359818744, guid: 1299bb7dd776bd5418281353c4587580, type: 3}
-  - {fileID: 21300000, guid: f99f89a141937224c9bb375000b9b2d9, type: 3}
+  - {fileID: 21300000, guid: f648630f320535046bfc17996fc06f98, type: 3}
 --- !u!4 &692548662
 Transform:
   m_ObjectHideFlags: 0
