@@ -9,7 +9,11 @@ public class CM_Bullet : MonoBehaviour
         StartCoroutine(TimeOfDeath());
     }
     void OnCollisionEnter2D(Collision2D other) {
-        Debug.Log(other.gameObject.name);
+        //Debug.Log(other.gameObject.name);
+        if (other.gameObject.tag == "Enemy")
+        {
+           other.gameObject.GetComponent<E_EnemyController>().Damage(1);
+        }
         StopCoroutine(TimeOfDeath());
         Destroy(gameObject);
     }
