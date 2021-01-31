@@ -8,6 +8,8 @@ public class RG_Room : MonoBehaviour
     public int height;
     public int X;
     public int Y;
+    public int totalEnemies = 0;
+    public bool doorsUnlocked = true;
     public RG_Door leftDoor;
     public RG_Door rightDoor;
     public RG_Door topDoor;
@@ -56,7 +58,7 @@ public class RG_Room : MonoBehaviour
 
         RG_RoomController.instance.RegisterRoom(this);
     }
-    
+
     public void RemoveDoors()
     {
         foreach(RG_Door door in doors)
@@ -129,17 +131,30 @@ public class RG_Room : MonoBehaviour
         foreach (RG_Door door in doors)
         {
             Transform doorTransform = door.gameObject.transform;
-            doorTransform.GetChild(1).gameObject.SetActive(toggle);
+            if (doorTransform.GetChild(0).gameObject.activeSelf)
+                doorTransform.GetChild(1).gameObject.SetActive(toggle);
         }
+    }
+
+    public void EnemyKilled()
+    {
+        totalEnemies -= 1;
+        if (totalEnemies == 0)
+            LockDoors(false);
     }
 
     public void SpawnEnemies()
     {
-        foreach (E_Spawn spawn in spawners)
+        if (spawners.Count > 0)
         {
-            spawn.Spawn();
+            LockDoors(true);
+            foreach (E_Spawn spawn in spawners)
+            {
+                totalEnemies += spawn.enemiesAmount;
+                spawn.Spawn();
+            }
+            spawners.Clear();
         }
-        enemies.AddRange(GetComponentsInChildren<E_EnemyController>());
     }
 
     private void OnDrawGizmos() {

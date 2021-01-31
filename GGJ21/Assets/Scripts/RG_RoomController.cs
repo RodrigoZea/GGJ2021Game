@@ -133,7 +133,6 @@ public class RG_RoomController : MonoBehaviour
         // We set so that the current room asigned to the camera changes
         RG_CameraController.instance.currentRoom = room;
         currentRoom = room;
-        currentRoom.LockDoors(true);
         currentRoom.SpawnEnemies();
     }
 }

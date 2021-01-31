@@ -15,10 +15,6 @@ public class E_Spawn : MonoBehaviour
         instance = this;
     }
 
-    void Start()
-    {
-    }
-
     public void Spawn()
     {
         for (int i = 0; i < enemiesAmount; i++)
@@ -30,7 +26,9 @@ public class E_Spawn : MonoBehaviour
                     transform.position.y + Random.Range(-yRange, yRange)),
                 Quaternion.identity);
             
-            enemy.transform.parent = this.gameObject.transform;
+            enemy.transform.parent = this.gameObject.transform.parent;
         }
+
+        Destroy(this);
     }
 }

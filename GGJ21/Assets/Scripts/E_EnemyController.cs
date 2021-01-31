@@ -40,12 +40,13 @@ public class E_EnemyController : MonoBehaviour
     private bool coolDownAttack = false;
     private float oldX;
     private Vector3 tempDestination;
-
+    private RG_Room currentRoom;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        currentRoom = RG_CameraController.instance.currentRoom;
         oldX = transform.position.x;
     }
 
@@ -187,6 +188,7 @@ public class E_EnemyController : MonoBehaviour
         print(health);
         if(health <= 0)
         {
+            currentRoom.EnemyKilled();
             StartCoroutine(Death());
         }
     }
