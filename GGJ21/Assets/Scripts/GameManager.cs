@@ -174,6 +174,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("TODO: Advance Level");
     }
 
+    public void PickUpLife()
+    {
+        if (lives < 3)
+        {
+            lives++;
+        }
+    }
+
     // USE PLAYER ACTION
 
     public void UseDash()
