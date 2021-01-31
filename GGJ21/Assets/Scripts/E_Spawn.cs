@@ -9,6 +9,7 @@ public class E_Spawn : MonoBehaviour
     public int xRange;
     public int yRange;
     public static E_Spawn instance;
+    public bool isEnemy = true;
 
     void Awake()
     {

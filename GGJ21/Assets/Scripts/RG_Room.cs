@@ -165,7 +165,7 @@ public class RG_Room : MonoBehaviour
         {
             LockDoors(false);
             RG_CameraController.instance.GetComponent<E_Audio>().PlayDoorsOpen();
-            
+
             if (name.Contains("Final"))
                 FL_Cat.instance.UpdateTrigger();
         }
@@ -182,6 +182,7 @@ public class RG_Room : MonoBehaviour
                 spawn.Spawn();
             }
             spawners.Clear();
+            Debug.Log("Enemigos en escena: " + totalEnemies);
         }
     }
 
