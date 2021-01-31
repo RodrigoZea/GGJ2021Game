@@ -150,6 +150,7 @@ public class E_EnemyController : MonoBehaviour
             {
                 case(EnemyType.Melee):
                     Debug.Log("Attack Melee!");
+                    player.gameObject.GetComponent<CM_PlayerMovement>().Damage(1);
                     StartCoroutine(CoolDown());
                     break;
                 case(EnemyType.Ranged):
@@ -189,6 +190,8 @@ public class E_EnemyController : MonoBehaviour
             StartCoroutine(Death());
         }
     }
+
+     
 
 }
  
