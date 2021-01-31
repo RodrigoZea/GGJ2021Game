@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   enemyType: 0
-  range: 10
+  range: 0.5
   speed: 1
   attackRange: 3
   coolDown: 2
