@@ -53,26 +53,52 @@ public class RG_Room : MonoBehaviour
     {
         foreach(RG_Door door in doors)
         {
+            Transform doorTransform = door.gameObject.transform;
+
             switch (door.doorDirection)
             {
                 case RG_DoorDirection.right:
                     if (GetRight() == null)
-                        door.gameObject.SetActive(false);
+                    {
+                        doorTransform.GetChild(0).gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        doorTransform.GetChild(1).gameObject.SetActive(false);
+                    }
                 break;
 
                 case RG_DoorDirection.left:
                     if (GetLeft() == null)
-                        door.gameObject.SetActive(false);
+                    {
+                        doorTransform.GetChild(0).gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        doorTransform.GetChild(1).gameObject.SetActive(false);
+                    }
                 break;
 
                 case RG_DoorDirection.down:
                     if (GetBottom() == null)
-                        door.gameObject.SetActive(false);
+                    {
+                        doorTransform.GetChild(0).gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        doorTransform.GetChild(1).gameObject.SetActive(false);
+                    }
                 break;
 
                 case RG_DoorDirection.top:
                     if (GetTop() == null)
-                        door.gameObject.SetActive(false);
+                    {
+                        doorTransform.GetChild(0).gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        doorTransform.GetChild(1).gameObject.SetActive(false);
+                    }
                 break;   
             }
         }
