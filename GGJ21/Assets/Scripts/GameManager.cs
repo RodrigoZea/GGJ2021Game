@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("TODO: Win Event");
         SceneManager.LoadScene("Win");
+        RG_CameraController.instance.GetComponent<E_Audio>().PlayGameWin();
         Destroy(this.gameObject);
     }
 

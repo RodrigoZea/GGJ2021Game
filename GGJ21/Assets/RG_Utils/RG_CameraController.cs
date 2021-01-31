@@ -7,6 +7,7 @@ public class RG_CameraController : MonoBehaviour
     public static RG_CameraController instance;
     public RG_Room currentRoom;
     public float roomSpeedChange = 100;
+    public E_Audio audioManager;
     
     void Awake() {
         instance = this;
@@ -14,7 +15,8 @@ public class RG_CameraController : MonoBehaviour
 
     void Start()
     {
-        
+        audioManager = GetComponent<E_Audio>();
+        audioManager.PlayGameTheme();
     }
 
     void Update()
