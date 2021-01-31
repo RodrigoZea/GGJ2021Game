@@ -149,11 +149,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("TODO: Game Over Event");
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene("GameOver");
+        Destroy(this.gameObject);
     }
 
     public void Win()
     {
         Debug.Log("TODO: Win Event");
+        SceneManager.LoadScene("Win");
+        Destroy(this.gameObject);
     }
 
     public void QuitGame()

@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FINAL/GameOver.unity
     guid: 3103c8e36541f5040a237f9f5a54f847
   - enabled: 1
+    path: Assets/Scenes/FINAL/Win.unity
+    guid: 3f41393a85eecf042bb27630657ce891
+  - enabled: 1
     path: Assets/Scenes/RoomGeneration.unity
     guid: ec34a93d473cc3144905fcf01129a1c1
   - enabled: 1
