@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/RG_Room8.unity
     guid: da1a671a4b6e115438c26fdf03360a56
+  - enabled: 1
+    path: Assets/Scenes/Rooms/RG_Final.unity
+    guid: bcc02212aa54ac04a95aeabbd54490da
   m_configObjects: {}
