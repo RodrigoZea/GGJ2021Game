@@ -74,7 +74,7 @@ public class CM_PlayerMovement : MonoBehaviour
 
     void MoveBulletPoint(){
         float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90f;
-        bulletPoint.localPosition = new Vector2(look.x * 0.1f, look.y * 0.1f);
+        bulletPoint.localPosition = new Vector2(look.x * 3.0f, look.y * 3.0f);
         bulletPoint.eulerAngles = new Vector3(0,0,angle);
     }
 
