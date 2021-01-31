@@ -13,10 +13,10 @@ public class RG_RoomGenerator : MonoBehaviour
 
     private string[] roomNames = new string[]
     {
-        // "Room1",
+        "Room1",
         "Room2",
-        // "Room3",
-        // "Room4",
+        "Room3",
+        "Room4",
         // "Room5",
         // "Room6",
         // "Room7",

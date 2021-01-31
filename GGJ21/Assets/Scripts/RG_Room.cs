@@ -9,6 +9,7 @@ public class RG_Room : MonoBehaviour
     public int X;
     public int Y;
     public int totalEnemies = 0;
+    private bool updatedDoors = false;
     public bool doorsUnlocked = true;
     public RG_Door leftDoor;
     public RG_Door rightDoor;
@@ -17,6 +18,13 @@ public class RG_Room : MonoBehaviour
     public List<RG_Door> doors = new List<RG_Door>();
     public List<E_Spawn> spawners = new List<E_Spawn>();
     public List<E_EnemyController> enemies = new List<E_EnemyController>();
+
+    public RG_Room(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+
     void Start()
     {
         if (RG_RoomController.instance == null)
@@ -52,11 +60,18 @@ public class RG_Room : MonoBehaviour
         }
 
         foreach (E_Spawn spawn in _spawners)
-        {
             spawners.Add(spawn);
-        }
 
         RG_RoomController.instance.RegisterRoom(this);
+    }
+
+    void Update()
+    {
+        if (name.Contains("Final") && !updatedDoors)
+        {
+            RemoveDoors();
+            updatedDoors = true;
+        }
     }
 
     public void RemoveDoors()

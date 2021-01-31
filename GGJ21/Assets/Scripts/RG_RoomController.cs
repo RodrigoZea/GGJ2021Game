@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +25,7 @@ public class RG_RoomController : MonoBehaviour
     Queue<RoomInfo> loadRoomQueue = new Queue<RoomInfo>();
     bool isLoadingRoom;
     bool updatedRooms = false;
+    bool spawnedFinalRoom = false;
 
     void Awake()
     {
@@ -48,12 +50,14 @@ public class RG_RoomController : MonoBehaviour
 
         if (loadRoomQueue.Count == 0)
         {
-            if (!updatedRooms)
+            if (!spawnedFinalRoom)
+                StartCoroutine(SpawnFinalRoom());
+
+            else if (spawnedFinalRoom && !updatedRooms)
             {
                 foreach (RG_Room room in loadedRooms)
-                {
                     room.RemoveDoors();
-                }
+
                 updatedRooms = true;
             }
             return;
@@ -63,6 +67,23 @@ public class RG_RoomController : MonoBehaviour
         isLoadingRoom = true;
 
         StartCoroutine(LoadRoomRoutine(currentLoadRoomData));
+    }
+
+    IEnumerator SpawnFinalRoom()
+    {
+        spawnedFinalRoom = true;
+        yield return new WaitForSeconds(0.5f);
+        if (loadRoomQueue.Count == 0)
+        {
+            RG_Room finalRoom = loadedRooms[loadedRooms.Count - 1];
+            RG_Room temp = new RG_Room(finalRoom.X, finalRoom.Y);
+
+            Destroy(finalRoom.gameObject);
+
+            var roomToRemove = loadedRooms.Single(r => r.X == temp.X && r.Y == temp.Y);
+            loadedRooms.Remove(roomToRemove);
+            LoadRoom("Final", temp.X, temp.Y);
+        }
     }
 
     public void LoadRoom(string name, int x, int y)
